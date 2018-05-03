@@ -90,6 +90,7 @@ typedef NS_ENUM(NSUInteger, PGDatePickerType) {
  相当于确定按钮，执行此方法PGDatePickerDelegate代理方法会得到值
  */
 - (void)tapSelectedHandler;
+- (void)tapCancelHandler;
 
 - (void)setDate:(NSDate *)date;
 - (void)setDate:(NSDate *)date animated:(BOOL)animated;
@@ -98,5 +99,6 @@ typedef NS_ENUM(NSUInteger, PGDatePickerType) {
 @protocol PGDatePickerDelegate <NSObject>
 
 - (void)datePicker:(PGDatePicker *)datePicker didSelectDate:(NSDateComponents *)dateComponents;
+- (void)cancelSelectDate;
 @end
 

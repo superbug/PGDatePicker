@@ -120,6 +120,12 @@ static NSString *const reuseIdentifier = @"PGDatePickerView";
     }
 }
 
+- (void)tapCancelHandler {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(cancelSelectDate)]) {
+        [self.delegate cancelSelectDate];
+    }
+}
+
 - (void)tapSelectedHandler {
     if (self.autoSelected == false) {
         [self selectedDateLogic];
