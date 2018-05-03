@@ -1,15 +1,28 @@
 PODS:
-  - PGDatePicker (2.4.2):
+  - PGDatePicker (2.4.3):
     - PGPickerView
   - PGPickerView (1.2.6)
 
 DEPENDENCIES:
-  - PGDatePicker
+  - PGDatePicker (from `https://github.com/superbug/PGDatePicker.git`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - PGPickerView
+
+EXTERNAL SOURCES:
+  PGDatePicker:
+    :git: https://github.com/superbug/PGDatePicker.git
+
+CHECKOUT OPTIONS:
+  PGDatePicker:
+    :commit: cd1f3a20e0cfe3d7f6084a5e60cf93fb7a9ad49b
+    :git: https://github.com/superbug/PGDatePicker.git
 
 SPEC CHECKSUMS:
-  PGDatePicker: 7341239fd699b8af0573f63d6e2e18f4369ac5ab
+  PGDatePicker: 16931faf779ddbe237234ac95f2faa9aeb22d9a3
   PGPickerView: 8fbbf63d0404065a43a495a0115d339455e0f819
 
-PODFILE CHECKSUM: f8c6d355d123cee6e595015c9e7d0e2770fcf067
+PODFILE CHECKSUM: 9f0a21d4de8d8752d7b730cd2ea78e8c47ac1f20
 
-COCOAPODS: 1.4.0.rc.1
+COCOAPODS: 1.5.0

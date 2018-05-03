@@ -72,6 +72,11 @@ static NSString *const reuseIdentifier = @"PGDatePickerView";
         if (self.currentComponents.year == self.minimumComponents.year && self.currentComponents.month == self.minimumComponents.month) {
             self.selectComponents.day = self.minimumComponents.day;
         }
+        if (self.maximumComponents.year == self.minimumComponents.year &&
+            self.maximumComponents.month == self.minimumComponents.month &&
+            self.maximumComponents.day == self.minimumComponents.day) {
+            self.selectComponents.hour = self.minimumComponents.hour;
+        }
         NSInteger day = [self howManyDaysWithMonthInThisYear:self.selectComponents.year withMonth:self.selectComponents.month];
         [self setDayListForMonthDays:day];
     }else {
@@ -112,6 +117,12 @@ static NSString *const reuseIdentifier = @"PGDatePickerView";
     }else {
         _setDate = [NSDate date];
         [self setDate:_setDate animated:false];
+    }
+}
+
+- (void)tapCancelHandler {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(cancelSelectDate)]) {
+        [self.delegate cancelSelectDate];
     }
 }
 

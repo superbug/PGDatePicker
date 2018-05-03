@@ -53,7 +53,8 @@
 - (void)headerViewButtonHandler {
     __weak id weak_self = self;
     self.headerView.cancelButtonHandlerBlock = ^{
-        __strong id strong_self = weak_self;
+        __strong PGDatePickManager *strong_self = weak_self;
+        [strong_self.datePicker tapCancelHandler];
         [strong_self cancelButtonHandler];
     };
     self.headerView.confirmButtonHandlerBlock =^{
