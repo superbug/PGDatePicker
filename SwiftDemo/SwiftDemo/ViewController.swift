@@ -134,11 +134,12 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: PGDatePickerDelegate {
+    
     func datePicker(_ datePicker: PGDatePicker!, didSelectDate dateComponents: DateComponents!) {
         print("dateComponents = ", dateComponents)
     }
     
-    func cancelSelectDate() {
+    func cancelSelectDate(_ datePicker: PGDatePicker!) {
         print("select canceled")
     }
 }
